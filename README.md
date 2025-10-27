@@ -1,3 +1,5 @@
+images/8c89ca2e-8fb8-4afa-9785-461082292cb1.png
+
 # 🎯 Sentiment Analysis App
 
 A web application built with **Streamlit** that performs **sentiment analysis** on user-provided text or uploaded files.  
