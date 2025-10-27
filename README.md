@@ -19,7 +19,7 @@ The app classifies sentiments into three categories: **Positive 😊**, **Neutra
 
 ##  Demo Preview
 
-![App Preview]()
+[Download Video](videos/app_review.mp4)
 
 
 
