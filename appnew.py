@@ -4,9 +4,7 @@ import pandas as pd
 import plotly.express as px
 import joblib
 
-# ========================
-# تحميل المودل
-# ========================
+
 @st.cache_resource
 def load_model():
     try:
@@ -19,9 +17,7 @@ def load_model():
                 return np.random.choice([1, 2, 3, 4, 5], size=len(texts))
         return DummyModel()
 
-# ========================
-# رفع الملف وتحليله
-# ========================
+
 def uploadFile():
     uploaded_file = st.file_uploader("Upload a data file", type=["csv", "xlsx"])
     if uploaded_file:
@@ -81,9 +77,7 @@ def uploadFile():
             csv = df.to_csv(index=False).encode("utf-8-sig")
             st.download_button("⬇️ Download Results (CSV)", csv, "sentiment_results.csv", "text/csv")
 
-# ========================
-# الصفحة الرئيسية
-# ========================
+
 def renderPage():
     st.markdown("""
     <style>
@@ -116,12 +110,10 @@ components.html("<hr class='hr-line' />", height=20)
 st.subheader("📁 File Analysis")
 st.write("Upload a CSV or Excel file containing text data for sentiment analysis.")
 
-# رفع الملف مباشرة بدون اختيار
+
 uploadFile()
 
 
-# ========================
-# استدعاء الصفحة (المهم!)
-# ========================
 if __name__ == "__main__":
     renderPage()
+
