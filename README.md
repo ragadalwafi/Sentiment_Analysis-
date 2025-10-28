@@ -20,14 +20,16 @@ The app classifies sentiments into three categories: **Positive 😊**, **Neutra
 ##  Demo Preview
 
 
+## 🚀 Application  - User Input
+[Watch the demo](https://github.com/user-attachments/assets/870e937e-0648-4b77-aea1-1e135c25a42d)
 
-
+## 🚀 Application  - Sentiment Analysis Dashboard
 https://github.com/user-attachments/assets/4794786f-1c88-449c-a1cb-cf3ad0634371
 
 
 
 
 
-https://github.com/user-attachments/assets/870e937e-0648-4b77-aea1-1e135c25a42d
+
 
 
