@@ -1,4 +1,4 @@
-![App Preview](images/8c89ca2e-8fb8-4afa-9785-461082292cb1.png)
+![App Preview](images/Sentiment-Analysis-App.png)
 
 #  Sentiment Analysis App
 
