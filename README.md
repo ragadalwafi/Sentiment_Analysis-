@@ -31,11 +31,11 @@ monitor public sentiment, and enhance digital interaction with citizens.
 ---
 
 ## Built With
-Python
-Streamlit
-scikit-learn
-Pandas
-Plotly
+- Python
+- Streamlit
+- scikit-learn
+- Pandas
+- Plotly
 
 ---
 
