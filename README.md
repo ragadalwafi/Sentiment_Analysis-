@@ -9,7 +9,7 @@ The app classifies sentiments into three categories: **Positive 😊**, **Neutra
 
 ## 🏛️ Project Context
 
-This project was developed as part of my training at **Amanat Al-Asimah (Capital Municipality)**.  
+This project was developed as part of my training at **Makkah Municipality**.  
 The goal was to build a **sentiment analysis tool** that analyzes user feedback from applications similar to **Balady App**,  
 helping to identify user satisfaction levels and common issues.  
 
