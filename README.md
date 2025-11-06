@@ -30,7 +30,15 @@ monitor public sentiment, and enhance digital interaction with citizens.
 
 ---
 
-## Built With
+## Libraries Used and Their Purpose
+
+This project uses several Python libraries for data processing, visualization, and building an interactive web application:
+
+- **Pandas** and **NumPy** – for data manipulation, cleaning, and numerical computations.  
+- **Streamlit** and **Streamlit Components** – to create an interactive web interface for displaying and analyzing results.  
+- **Plotly** and **Matplotlib** – for generating both static and interactive visualizations.  
+- **WordCloud**, **Arabic_Reshaper**, and **Bidi Algorithm** – to generate and properly display Arabic word clouds.  
+- **Joblib** – for saving and loading machine learning models efficiently.
 
 
 ---
@@ -38,10 +46,10 @@ monitor public sentiment, and enhance digital interaction with citizens.
 ##  Demo Preview
 
 
-## 🚀 Application  - User Input
+## Application  - User Input
 [Watch the demo](https://github.com/user-attachments/assets/3a4d3af4-75be-4d67-a454-8a4fd33b94ab)
 
-## 🚀 Application  - Sentiment Analysis Dashboard
+## Application  - Sentiment Analysis Dashboard
 [Watch the demo](https://github.com/user-attachments/assets/2c162fee-14d8-41b0-951d-fe3550039553)
 
 
