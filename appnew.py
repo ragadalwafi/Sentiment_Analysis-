@@ -58,11 +58,10 @@ def render_page():
     </style>
     """, unsafe_allow_html=True)
 
-    # الصورة على اليمين + العنوان في المنتصف
     col_left, col_right = st.columns([8, 2])
     with col_right:
-        st.image("sentiment-analysis.png", width=120)
-
+        st.image("images/sentiment-analysis.png", width=120)
+            
     with col_left:
         st.markdown("<h1>Sentiment Analysis</h1>", unsafe_allow_html=True)
         components.html("<hr class='hr-line' />", height=20)
@@ -163,4 +162,5 @@ def render_page():
 
 if __name__ == "__main__":
      render_page()
+
 
