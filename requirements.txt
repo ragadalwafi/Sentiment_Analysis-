@@ -1,6 +1,11 @@
 streamlit
 pandas
 numpy
-plotly
 joblib
-scikit-learn
+plotly
+wordcloud
+matplotlib
+arabic-reshaper
+python-bidi
+
+
