@@ -7,3 +7,4 @@ wordcloud
 matplotlib
 arabic-reshaper
 python-bidi
+openpyxl
