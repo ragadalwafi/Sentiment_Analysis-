@@ -9,7 +9,7 @@ The app classifies sentiments into three categories: **Positive 😊**, **Neutra
 
 ## 🚀 Live App
 
-[![Open in Streamlit](https://glffnhpiyjjve76flktynu.streamlit.app)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://glffnhpiyjjve76flktynu.streamlit.app/)
 
 ---
 
