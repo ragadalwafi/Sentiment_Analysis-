@@ -1,6 +1,6 @@
 ![App Preview](images/Sentiment_app.png)
 
-#  Sentiment Analysis App
+
 
 A web application built with **Streamlit** that performs **sentiment analysis** on user-provided text or uploaded files.  
 The app classifies sentiments into three categories: **Positive 😊**, **Neutral 😐**, and **Negative 😡**.
