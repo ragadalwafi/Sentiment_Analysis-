@@ -1,4 +1,4 @@
-![App Preview](images/Sentiment(1).png)
+![App Preview](images/Sentiment_app.png)
 
 #  Sentiment Analysis App
 
