@@ -36,7 +36,7 @@ monitor public sentiment, and enhance digital interaction with citizens.
 
 ---
 
-## Libraries Used and Their Purpose
+## Libraries
 
 This project uses several Python libraries for data processing, visualization, and building an interactive web application:
 
