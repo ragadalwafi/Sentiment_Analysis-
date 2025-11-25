@@ -31,40 +31,24 @@ STOPWORDS = set([
     "بعد","قبل","حتى","مع","لكن","بل","هو","هي","هم","هن","أنا","نحن","انت","أنت"
 ])
 
-    # ===== Custom UI styling =====
+# ===== Custom UI styling =====
 def render_page():
     st.markdown("""
     <style>
     [data-testid="stAppViewContainer"] > .main {
         background-color: #ffffff;
-        padding: 2rem 4rem;
-    }
-    h1 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: #222;
-        font-weight: 800;
-        margin-bottom: 0.5rem;
-    }
-    .hr-line {
-        height: 3px;
-        background-color: #333;
-        border: none;
-        margin-bottom: 1rem;
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 0rem 0rem;
     }
     </style>
     """, unsafe_allow_html=True)
 
+    # ===== Header Banner =====
+    st.image("images/Sentiment_app.png", use_column_width=True)
+
     col_left, col_right = st.columns([8, 2])
     with col_right:
         st.image("images/sentiment-analysis.png", width=120)
-            
-    with col_left:
-        st.markdown("<h1>Sentiment Analysis</h1>", unsafe_allow_html=True)
-        components.html("<hr class='hr-line' />", height=20)
+
 
     # ===== File Upload =====
     uploaded_file = st.file_uploader("📤 Upload your CSV or Excel file with text data", type=["csv", "xlsx"])
@@ -162,5 +146,6 @@ def render_page():
 
 if __name__ == "__main__":
      render_page()
+
 
 
