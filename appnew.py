@@ -31,31 +31,39 @@ STOPWORDS = set([
     "بعد","قبل","حتى","مع","لكن","بل","هو","هي","هم","هن","أنا","نحن","انت","أنت"
 ])
 
-# ===== Custom UI styling =====
+# ========================
+# Custom UI Styling
+# ========================
 def render_page():
+
     st.markdown("""
-    <style>
-    [data-testid="stAppViewContainer"] > .main {
-        background-color: #ffffff;
-        padding: 0rem 0rem;
-    }
-    </style>
+        <style>
+
+        img[alt="Sentiment_app"] {
+            display: none !important;
+        }
+
+        img[data-testid="stImage"] {
+            max-width: 100% !important;
+        }
+
+        /* إخفاء أي صور تلقائية يضيفها Streamlit */
+        img[src*="emoji"], img[src*="emojis"], img[src*="icons"] {
+            display: none !important;
+        }
+
+        </style>
     """, unsafe_allow_html=True)
 
     # ===== Header Banner =====
-    st.image("images/Sentiment_app.png", use_column_width=True)
-
-    col_left, col_right = st.columns([8, 2])
-    with col_right:
-        st.image("images/sentiment-analysis.png", width=120)
-
+    st.image("images/Sentiment_app.png", use_container_width=True)
 
     # ===== File Upload =====
     uploaded_file = st.file_uploader("📤 Upload your CSV or Excel file with text data", type=["csv", "xlsx"])
     if not uploaded_file:
         st.stop()
 
-    # ===== Read the uploaded file =====
+    # ===== Read File =====
     try:
         if uploaded_file.name.endswith(".csv"):
             df = pd.read_csv(uploaded_file, encoding="utf-8")
@@ -64,6 +72,7 @@ def render_page():
     except Exception as e:
         st.error(f"Error reading file: {e}")
         st.stop()
+
     st.subheader("📋 File Preview")
     st.dataframe(df.head())
 
@@ -81,15 +90,17 @@ def render_page():
             else: return "😊 Positive"
 
         df["Sentiment"] = [label(p) for p in preds]
+
         st.success("✅ Sentiment analysis completed successfully!")
         st.dataframe(df[[text_col, "Sentiment"]].head(10))
 
         # ===== Pie Chart =====
         counts = df["Sentiment"].value_counts().reset_index()
         counts.columns = ["Sentiment", "Count"]
+
         fig = px.pie(counts, names="Sentiment", values="Count", title="Sentiment Distribution")
         st.plotly_chart(fig, use_container_width=True)
-        
+
         # ===== Bar Chart =====
         pie_colors = fig.data[0].marker.colors
 
@@ -100,7 +111,7 @@ def render_page():
             color="Sentiment",
             text="Count",
             title="Sentiment Counts",
-            color_discrete_sequence=pie_colors 
+            color_discrete_sequence=pie_colors
         )
         bar_fig.update_traces(textposition='outside')
         st.plotly_chart(bar_fig, use_container_width=True)
@@ -117,35 +128,36 @@ def render_page():
             return " ".join([w for w in t.split() if w not in STOPWORDS])
 
         col1, col2 = st.columns(2)
+
+        # Positive Word Cloud
         with col1:
             st.write("😊 Positive Words")
             text = clean_text(pos_text)
             reshaped = arabic_reshaper.reshape(text)
             bidi_text = get_display(reshaped)
-            wc = WordCloud(font_path=font_path, width=800, height=400, background_color="white", colormap="Greens").generate(bidi_text)
+            wc = WordCloud(font_path=font_path, width=800, height=400,
+                           background_color="white", colormap="Greens").generate(bidi_text)
             fig, ax = plt.subplots()
             ax.imshow(wc, interpolation='bilinear')
             ax.axis("off")
             st.pyplot(fig)
 
+        # Negative Word Cloud
         with col2:
             st.write("😞 Negative Words")
             text = clean_text(neg_text)
             reshaped = arabic_reshaper.reshape(text)
             bidi_text = get_display(reshaped)
-            wc = WordCloud(font_path=font_path, width=800, height=400, background_color="white", colormap="Reds").generate(bidi_text)
+            wc = WordCloud(font_path=font_path, width=800, height=400,
+                           background_color="white", colormap="Reds").generate(bidi_text)
             fig, ax = plt.subplots()
             ax.imshow(wc, interpolation='bilinear')
             ax.axis("off")
             st.pyplot(fig)
 
-        # ===== Download Results =====
+        # ===== Download Button =====
         csv = df.to_csv(index=False).encode("utf-8-sig")
         st.download_button("⬇️ Download Results", csv, "sentiment_results.csv", "text/csv")
 
-
 if __name__ == "__main__":
-     render_page()
-
-
-
+    render_page()
