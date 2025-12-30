@@ -53,10 +53,10 @@ This project uses several Python libraries for data processing, visualization, a
 
 
 ## Application  - User Input
-[Watch the demo](https://github.com/user-attachments/assets/3a4d3af4-75be-4d67-a454-8a4fd33b94ab)
+[Watch the demo](https://github.com/user-attachments/assets/df110cee-08d5-4a02-8904-a13919fc1d35)
 
 ## Application  - Sentiment Analysis Dashboard
-[Watch the demo](https://github.com/user-attachments/assets/2c162fee-14d8-41b0-951d-fe3550039553)
+[Watch the demo](https://github.com/user-attachments/assets/5ebf57f2-889b-4c02-aa27-cc32c7571885)
 
 
 
