@@ -29,10 +29,9 @@ monitor public sentiment, and enhance digital interaction with citizens.
 ##  Features
 
 -  Analyze text or comments in real-time.  
--  Upload CSV files for bulk sentiment analysis.  
--  Interactive charts to visualize sentiment distribution.  
+-  Upload CSV files for bulk sentiment analysis.    
 -  Uses a pre-trained machine learning model (`model.joblib`).  
--  Simple and elegant Streamlit dashboard interface.
+-  Interactive charts and Word Cloud visualization.
 
 ---
 
