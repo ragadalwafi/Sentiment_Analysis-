@@ -46,7 +46,7 @@ df_nonempty = df[df["content_cleaned"].str.strip() != ""].copy()
 df_final = df_nonempty[["content_cleaned", "score"]]
 df_final.to_csv("cleaned_with_score.csv", index=False, encoding="utf-8-sig")
 
-print("✅ تم تنظيف النصوص وحفظ العمود مع score في 'cleaned_with_score.csv'")
+print( "'cleaned_with_score.csv'")
 
 
 # In[29]:
@@ -85,7 +85,7 @@ df_nonempty = df[df["content_cleaned"].str.strip() != ""].copy()
 df_final = df_nonempty[["content_cleaned", "score"]]
 df_final.to_csv("cleaned_with_score.csv", index=False, encoding="utf-8-sig")
 
-print("✅ تم إزالة كل الإيموجي وحفظ العمود مع score بنجاح")
+print("✅")
 
 
 # In[32]:
@@ -130,7 +130,7 @@ model = Pipeline([
 
 
 model.fit(X_train, y_train)
-print("✅ تم تدريب النموذج بنجاح")
+print("تم تدريب النموذج بنجاح")
 
 
 y_pred = model.predict(X_test)
@@ -142,7 +142,7 @@ print(confusion_matrix(y_test, y_pred))
 
 
 joblib.dump(model, "sentiment_model_pipeline_balanced.pkl")
-print("✅ تم حفظ النموذج المحسّن في 'sentiment_model_pipeline_balanced.pkl'")
+print("'sentiment_model_pipeline_balanced.pkl'")
 
 
 # In[ ]:
